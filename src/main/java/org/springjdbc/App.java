@@ -18,7 +18,11 @@ public class App
         JdbcTemplate template=context.getBean("jdbctemplate",JdbcTemplate.class);
 
         //insert query
-        String query="intert into student(id,name,city) values()";
+        String query="insert into student(id,name,city) values(?,?,?)";
+
+        //Fire the Query
+        int result=template.update(query,4,"Rocky","Tikapur");
+        System.out.println("Number of record inserted..."+result);
 
 
 
