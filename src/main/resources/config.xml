@@ -17,4 +17,8 @@
         </property>
     </bean>
 
+    <bean class="org.springjdbc.dao.StudentDaoImpl" name="dao">
+        <property name="jdbcTemplate" ref="jdbctemplate"/>
+    </bean>
+
 </beans>
