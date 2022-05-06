@@ -8,5 +8,8 @@ public interface StudentDao {
 
     public int delete(int studentId);
 
+    public Student getStudent(int studentId);
+
+
 
 }
