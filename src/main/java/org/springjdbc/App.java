@@ -5,6 +5,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springjdbc.dao.StudentDao;
 import org.springjdbc.entities.Student;
 
+import java.util.List;
+
 /**
  * Hello world!
  *
@@ -23,6 +25,8 @@ public class App
 //        student=studentDao.getStudent(40);
 //        System.out.println(student);
 
+        List<Student> students=studentDao.getListStudent();
+        System.out.println(students);
 
 
     }
