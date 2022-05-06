@@ -48,7 +48,8 @@ public class StudentDaoImpl implements  StudentDao {
     public Student getStudent(int studentId) {
         //
         String query="select * from student where id=?";
-        Student result =jdbcTemplate.queryForObject(query, rowMapper,studentId);
-        return result;
+        RowMapper<Student> rowMapper=new RowMapperImpl();
+        Student student =jdbcTemplate.queryForObject(query, rowMapper,studentId);
+        return student;
     }
 }

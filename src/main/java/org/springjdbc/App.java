@@ -20,6 +20,9 @@ public class App
         StudentDao studentDao=context.getBean("dao", StudentDao.class);
         Student student=new Student();
 
+        student=studentDao.getStudent(40);
+        System.out.println(student);
+
 
 
     }
