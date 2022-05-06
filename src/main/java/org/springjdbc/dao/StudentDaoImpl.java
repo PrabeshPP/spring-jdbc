@@ -4,6 +4,8 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springjdbc.entities.Student;
 
+import java.util.List;
+
 public class StudentDaoImpl implements  StudentDao {
 
     private JdbcTemplate jdbcTemplate;
@@ -51,5 +53,14 @@ public class StudentDaoImpl implements  StudentDao {
         RowMapper<Student> rowMapper=new RowMapperImpl();
         Student student =jdbcTemplate.queryForObject(query, rowMapper,studentId);
         return student;
+    }
+
+    @Override
+    public List<Student> getListStudent() {
+        //Selecting multiple students
+        String query="select * from student";
+        RowMapper<Student> rowMapper=new RowMapperImpl();
+        List<Student> list=jdbcTemplate.query(query,rowMapper);
+        return list;
     }
 }
