@@ -19,10 +19,10 @@ public class App
 
         StudentDao studentDao=context.getBean("dao", StudentDao.class);
         Student student=new Student();
-        student.setId(1200);
+        student.setId(4);
         student.setCity("Bhaktapur");
-        student.setName("Sumesh Chaudhary");
-        int result= studentDao.insert(student);
+        student.setName("Rocky");
+        int result= studentDao.change(student);
         System.out.println(result);
 
 
