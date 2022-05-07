@@ -33,12 +33,6 @@ public class JDBCConfig {
 
     }
 
-    @Bean("Dao")
-    public StudentDaoImpl getStudentDao(){
-        StudentDaoImpl studentDao=new StudentDaoImpl();
-        studentDao.setJdbcTemplate(getTemplate());
-        return studentDao;
-    }
 
 
 
