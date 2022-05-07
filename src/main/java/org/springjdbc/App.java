@@ -20,7 +20,7 @@ public class App
         System.out.println( "My Program Started....." );
         ApplicationContext context=new AnnotationConfigApplicationContext(JDBCConfig.class);
 //        JDBCConfig jdbcConfig=new JDBCConfig();
-        StudentDao studentDao= context.getBean("studentDao1",StudentDao.class);
+        StudentDao studentDao= context.getBean("studentDao",StudentDao.class);
         Student student=new Student();
 
 //        student=studentDao.getStudent(40);
