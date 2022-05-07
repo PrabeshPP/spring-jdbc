@@ -1,7 +1,7 @@
 package org.springjdbc;
 
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springjdbc.dao.StudentDao;
 import org.springjdbc.entities.Student;
 
@@ -17,9 +17,9 @@ public class App
     {
 
         System.out.println( "My Program Started....." );
-        ApplicationContext context=new ClassPathXmlApplicationContext("config.xml");
-
-        StudentDao studentDao=context.getBean("dao", StudentDao.class);
+        ApplicationContext context=new AnnotationConfigApplicationContext(JDBCConfig.class);
+        JDBCConfig jdbcConfig=new JDBCConfig();
+        StudentDao studentDao= jdbcConfig.getStudentDao();
         Student student=new Student();
 
 //        student=studentDao.getStudent(40);
