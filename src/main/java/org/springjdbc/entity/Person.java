@@ -1,9 +1,9 @@
-package entity;
+package org.springjdbc.entity;
 
 public class Person {
     private int Id;
-    private String Name;
-    private int Age;
+    private  String Name;
+    private int age;
 
     public int getId() {
         return Id;
@@ -22,14 +22,14 @@ public class Person {
     }
 
     public int getAge() {
-        return Age;
+        return age;
     }
 
     public void setAge(int age) {
-        Age = age;
+        this.age = age;
     }
 
-    public Person(){
+    public  Person(){
 
     }
 }
