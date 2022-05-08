@@ -32,4 +32,13 @@ public class Person {
     public  Person(){
 
     }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "Id=" + Id +
+                ", Name='" + Name + '\'' +
+                ", age=" + age +
+                '}';
+    }
 }
